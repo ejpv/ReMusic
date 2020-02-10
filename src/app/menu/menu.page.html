@@ -1,0 +1,35 @@
+<ion-split-pane>
+  <ion-menu contentId="content" side="start">
+    <ion-toolbar color="secondary" (click)="closeMenu()">
+      <ion-buttons slot="end">
+        Cerrar Menu
+        <ion-button>
+          <ion-icon name="arrow-dropleft" size="large"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="home" padding></ion-icon>
+          <ion-text> Home</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="settings" padding></ion-icon>
+          <ion-text> Configuración</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+    <ion-footer>
+      <ion-toolbar color="primary" (click)="logout()">
+        <ion-buttons slot="start">
+          <ion-button>
+            <ion-icon name="log-out" size="large"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        Cerrar Cesión
+      </ion-toolbar>
+    </ion-footer>
+  </ion-menu>
+  <ion-router-outlet id="content" main></ion-router-outlet>
+</ion-split-pane>

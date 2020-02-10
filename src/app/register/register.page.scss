@@ -1,0 +1,16 @@
+h1{
+    margin : 0,0,0,0;
+    color: var(--ion-color-secondary);
+}
+img{
+    max-height: 25%;
+    max-width: 70%;
+    margin-bottom: -10px;
+}
+ion-icon[name="arrow-round-back"]{
+    float: right;
+    font-size:48px;
+    color: var(--ion-color-primary);
+    margin-top:5px;
+    margin-left:5px;
+}

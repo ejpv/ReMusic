@@ -1,0 +1,38 @@
+<ion-content>
+
+  <figure text-center padding>
+    <img src="../../assets/img/logo.png">
+  </figure>
+  <form [formGroup]='loginForm' (ngSubmit)='loginUser(loginForm.value)'>
+    <ion-item>
+      <ion-label>Email:</ion-label>
+      <ion-input formControlName='mail'></ion-input>
+    </ion-item>
+    <div class="validation-error">
+      <ng-container *ngFor='let validation of validationMessages.mail'>
+        <div
+          *ngIf="loginForm.get('mail').hasError(validation.type) && (loginForm.get('mail').dirty || loginForm.get('mail').touched)">
+          <b style="color:red">Error: </b>{{validation.message}}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item>
+      <ion-label>Contraseña:</ion-label>
+      <ion-input type='password' formControlName='password'></ion-input>
+    </ion-item>
+    <div class="validation-error">
+      <ng-container *ngFor='let validation of validationMessages.password'>
+        <div
+          *ngIf="loginForm.get('password').hasError(validation.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+          <b style="color:red">Error: </b>{{validation.message}}
+        </div>
+      </ng-container>
+    </div>
+    <ion-button text-center expand="full" shape="round" [disabled]="loginForm.invalid" type="submit">
+      Entrar
+    </ion-button>
+    <ion-button text-center expand="full" fill="outline" shape="round" (click)="goToRegister()">
+      Registrar
+    </ion-button>
+  </form>
+</ion-content>

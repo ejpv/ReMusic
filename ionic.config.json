@@ -1,5 +1,7 @@
 {
   "name": "ReMusic",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

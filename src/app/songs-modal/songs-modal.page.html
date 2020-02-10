@@ -1,0 +1,23 @@
+<ion-button (click)="selectSong('')">
+  <ion-icon name="arrow-round-back">
+  </ion-icon>
+</ion-button>
+<img src='{{img}}' />
+<ion-content>
+<ion-card>
+  <ion-card-title>
+    {{name + text}}
+  </ion-card-title>
+</ion-card>
+<ion-list>
+  <ion-item *ngFor= "let song of songs; index as i" (click)="selectSong(song)">
+    <ion-avatar>
+      {{i+1}}
+    </ion-avatar>
+    <ion-label>
+      <h2>{{song.name}}</h2>
+      <p>{{song.popularity}}</p>
+    </ion-label>
+  </ion-item>
+</ion-list>
+</ion-content>

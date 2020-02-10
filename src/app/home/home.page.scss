@@ -1,1 +1,22 @@
+ion-avatar{
+    height:120px;
+    width: 90%;
+}
+ion-avatar img{
+    width: 90px;
+    height: 90px;
+}
+.square{
+    --border-radius: 0;
+}
+ion-avatar span{
+    font-size: 12px;
+}
 
+.reproductor{
+    padding-left: 40px;
+}
+
+h1 {
+    padding-left: 8px;
+}

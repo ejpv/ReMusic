@@ -1,0 +1,12 @@
+ion-card{
+    position: relative;
+    text-align: center;
+    box-shadow: none !important;
+}
+ion-button{
+    display: inline;
+    position: absolute;
+}
+ion-button ion-icon{
+    size: 60;
+}
